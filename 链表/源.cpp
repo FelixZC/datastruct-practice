@@ -37,6 +37,7 @@ LinkList createLinkList2() {
 	return list;
 }
 
+//按序号查找
 LinkList queryLinkNode1(LinkList list,int position){
 	if (!list) {
 		return NULL;
@@ -57,6 +58,7 @@ LinkList queryLinkNode1(LinkList list,int position){
 	return target;
 }
 
+//按值查找
 LinkList queryLinkNode2(LinkList list, ElementType data) {
 	if (!list||!data) {
 		return NULL;
@@ -67,22 +69,80 @@ LinkList queryLinkNode2(LinkList list, ElementType data) {
 	}
 	return target;
 }
-int insertLinkList(LinkList& list, int position, ElementType data;) {
+
+//单链表插入
+int insertLinkList(LinkList list, int position, ElementType data) {
 	if (!list) {
 		return -1;
 	}
-	LinkList target = queryLinkNode1(list, position);
+	LinkList target = queryLinkNode1(list, position-1);
 	if (!target) {
 		return -1;
 	};
-	LinkList s = (LinkList)
-}
-int deleteLinkList() {
+	LinkList s = (LinkList)malloc(sizeof(LinkNode));
+	s->data = data;
+	s->next = target->next;
+	target->next = s;
+	return 1;
 }
 
-void printLinkList() {
+//单链表删除
+int deleteLinkList(LinkList &list,int position) {
+	if (!list) {
+		return -1;
+	}
+	LinkList target = queryLinkNode1(list, position - 1);
+	if (!target) {
+		return -1;
+	};
+	LinkList temp = target->next;
+	target->next = temp->next;
+	free(temp);
+	return 1;
 }
+
+//打印链表
+void printLinkList(LinkList list) {
+	if (!list) {
+		return;
+	}
+	LinkList s = list->next;
+	while (s) {
+		printf("%4d", s->data);
+		s = s->next;
+	}
+	printf("\n");
+}
+
 int main() {
-	LinkList list = createLinkList();
+	//LinkList list = createLinkList();
+	LinkList list = createLinkList2();
+	int res;
+	res = insertLinkList(list, 2, 111);
+	if (res) {
+		printf("插入成功\n");
+		printLinkList(list);
+	}
+	else {
+		printf("插入失败\n");
+	}
+	res = deleteLinkList(list, 4);
+	if (res) {
+		printf("删除成功\n");
+		printLinkList(list);
+	}
+	else {
+		printf("删除成功\n");
+	}
+	LinkList target =NULL;
+	//target = queryLinkNode2(list, 111);
+	target = queryLinkNode1(list, 5);
+	if (target){
+		printf("查找成功\n");
+		printf("目标值为%d", target->data);
+	}
+	else {
+		printf("查找失败\n");
+	}
 	return 0;
 }

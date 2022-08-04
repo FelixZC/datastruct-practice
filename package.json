@@ -1,0 +1,18 @@
+{
+  "name": "struct-data-package",
+  "version": "1.0.0",
+  "description": "#### 创建目的 1. 代码练习 2. 记录变更",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/felixzc/data-structure-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commitizen": "^4.2.5"
+  }
+}
