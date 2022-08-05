@@ -71,7 +71,7 @@ DLinkList queryLinkNode1(DLinkList list, int position) {
 int insertLinkList(DLinkList list, int position, ElementType data) {
 	DLinkList p = queryLinkNode1(list, position - 1);
 	if (!p) {
-		return - 1;
+		return 0;
 	}
 	DLinkList s = (DLinkList)malloc(sizeof(DNode));
 	s->data = data;
@@ -86,11 +86,11 @@ int insertLinkList(DLinkList list, int position, ElementType data) {
 int deleteLinkList(DLinkList& list, int position) {
 	DLinkList target = queryLinkNode1(list,position - 1);
 	if (!target) {
-		return -1;
+		return 0;
 	}
 	DLinkList s = target->next;
 	if (!s) {
-		return -1;
+		return 0;
 	}
 	target->next = s->next;
 	if (s->next) {

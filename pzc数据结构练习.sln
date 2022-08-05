@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "线性表", "线性表\线�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "双向链表", "双向链表\双向链表.vcxproj", "{C7EA83A8-656D-49F0-AA31-E334ACCC9E14}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "栈", "栈\栈.vcxproj", "{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{C7EA83A8-656D-49F0-AA31-E334ACCC9E14}.Release|x64.Build.0 = Release|x64
 		{C7EA83A8-656D-49F0-AA31-E334ACCC9E14}.Release|x86.ActiveCfg = Release|Win32
 		{C7EA83A8-656D-49F0-AA31-E334ACCC9E14}.Release|x86.Build.0 = Release|Win32
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Debug|x64.ActiveCfg = Debug|x64
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Debug|x64.Build.0 = Debug|x64
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Debug|x86.ActiveCfg = Debug|Win32
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Debug|x86.Build.0 = Debug|Win32
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Release|x64.ActiveCfg = Release|x64
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Release|x64.Build.0 = Release|x64
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Release|x86.ActiveCfg = Release|Win32
+		{5A70D4FA-B8ED-42E5-B8C0-627037CDA571}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

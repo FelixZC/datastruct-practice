@@ -74,7 +74,7 @@ LinkList queryLinkNode2(LinkList list, ElementType data) {
 int insertLinkList(LinkList list, int position, ElementType data) {
 	LinkList target = queryLinkNode1(list, position-1);
 	if (!target) {
-		return -1;
+		return 0;
 	};
 	LinkList s = (LinkList)malloc(sizeof(LinkNode));
 	s->data = data;
@@ -87,7 +87,7 @@ int insertLinkList(LinkList list, int position, ElementType data) {
 int deleteLinkList(LinkList &list,int position) {
 	LinkList target = queryLinkNode1(list, position - 1);
 	if (!target) {
-		return -1;
+		return 0;
 	};
 	LinkList temp = target->next;
 	target->next = temp->next;
