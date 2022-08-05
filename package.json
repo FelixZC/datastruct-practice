@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://gitee.com/felixzc/data-structure-exercise.git"
   },
-  "author": "",
+  "author": "pzc",
   "license": "ISC",
   "devDependencies": {
     "commitizen": "^4.2.5"
