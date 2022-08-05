@@ -72,9 +72,6 @@ LinkList queryLinkNode2(LinkList list, ElementType data) {
 
 //单链表插入
 int insertLinkList(LinkList list, int position, ElementType data) {
-	if (!list) {
-		return -1;
-	}
 	LinkList target = queryLinkNode1(list, position-1);
 	if (!target) {
 		return -1;
@@ -88,9 +85,6 @@ int insertLinkList(LinkList list, int position, ElementType data) {
 
 //单链表删除
 int deleteLinkList(LinkList &list,int position) {
-	if (!list) {
-		return -1;
-	}
 	LinkList target = queryLinkNode1(list, position - 1);
 	if (!target) {
 		return -1;
