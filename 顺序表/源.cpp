@@ -6,7 +6,7 @@ typedef struct {
 	int length;
 }SqList;
 
-//打印线性表
+//打印顺序表
 void printSqList(SqList list) {
 	for (size_t i = 0; i < list.length; i++)
 	{
@@ -14,7 +14,7 @@ void printSqList(SqList list) {
 	}
 }
 
-//线性表插入
+//顺序表插入
 int insertSqList(SqList& list, int position, ElementType data) {
 	if (position<1 || position>list.length + 1) {
 		return 0;
@@ -31,7 +31,7 @@ int insertSqList(SqList& list, int position, ElementType data) {
 	return 1;
 }
 
-//线性表删除
+//顺序表删除
 int deleteSqList(SqList& list, int position, ElementType& result) {
 	if (position <1 || position>list.length) {
 		return 0;
@@ -48,7 +48,7 @@ int deleteSqList(SqList& list, int position, ElementType& result) {
 	return 1;
 }
 
-//线性表查找
+//顺序表查找
 int querySqList(SqList list, ElementType target) {
 	for (size_t i = 0; i < list.length; i++)
 	{
