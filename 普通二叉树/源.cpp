@@ -21,6 +21,20 @@ void preOrder(BiTree tree) {
 }
 //前序遍历,深度优先遍历,非递归
 void preOrder2(BiTree tree) {
+	stack<BiTree> tempStack;
+	BiTree b = tree;
+	while (b || !tempStack.empty()) {
+		if (b) {
+			cout << b->c;
+			tempStack.push(b);
+			b = b->lchild;
+		}
+		else {
+			b = tempStack.top();
+			tempStack.pop();
+			b = b->rchild;
+		}
+	}
 }
 
 //中序遍历
@@ -59,6 +73,29 @@ void backOrder(BiTree tree) {
 }
 //后序遍历,非递归
 void backOrder2(BiTree tree) {
+	stack<BiTree> tempStack;
+	BiTree b = tree, r = NULL;
+	while (b || !tempStack.empty()) {
+		if (b) {
+			tempStack.push(b);
+			b = b->lchild;
+		}
+		else {
+			b = tempStack.top();
+			//这里遍历完右孩子节点后，重新回到父级，要让父级知道右孩子节点已经遍历过了
+			if (b->rchild && b->rchild!=r) {
+				b = b->rchild;
+			}
+			else {
+				tempStack.pop();
+				cout << b->c;
+				//记录上次遍历过的右孩子节点
+				r = b;
+				//走到底了，置空，回到父级
+				b = NULL;
+			}
+		}
+	}
 }
 //层次遍历，广度优先遍历
 void levelOrder(BiTree tree) {
@@ -111,14 +148,14 @@ int main() {
 	//hdibjeafcg中序遍历
 	//hidjebfgca后续遍历
 	levelOrder(tree);
-	preOrder(tree);
-	//preOrder2(tree);
+	//preOrder(tree);
+	preOrder2(tree);
 	cout << "前序遍历" << endl;
 	//inOrder(tree);
 	inOrder2(tree);
 	cout << "中序遍历" << endl;
-	backOrder(tree);
-	//backOrder2(tree);
+	//backOrder(tree);
+	backOrder2(tree);
 	cout << "后续遍历" << endl;
 	return -1;
 }
