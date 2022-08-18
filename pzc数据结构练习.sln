@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "排序二叉树", "排序�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "字符串匹配KMP", "字符串匹配KMP\字符串匹配KMP.vcxproj", "{F3B60B8C-3CFD-4E17-86BD-18EA1B7465FA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "折半查找", "折半查找\折半查找.vcxproj", "{E5F6209D-6951-4791-897C-B91A5A9DDBB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{F3B60B8C-3CFD-4E17-86BD-18EA1B7465FA}.Release|x64.Build.0 = Release|x64
 		{F3B60B8C-3CFD-4E17-86BD-18EA1B7465FA}.Release|x86.ActiveCfg = Release|Win32
 		{F3B60B8C-3CFD-4E17-86BD-18EA1B7465FA}.Release|x86.Build.0 = Release|Win32
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Debug|x64.ActiveCfg = Debug|x64
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Debug|x64.Build.0 = Debug|x64
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Debug|x86.ActiveCfg = Debug|Win32
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Debug|x86.Build.0 = Debug|Win32
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Release|x64.ActiveCfg = Release|x64
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Release|x64.Build.0 = Release|x64
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Release|x86.ActiveCfg = Release|Win32
+		{E5F6209D-6951-4791-897C-B91A5A9DDBB5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
