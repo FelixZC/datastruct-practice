@@ -8,7 +8,7 @@ typedef struct {
 	int length;
 }stable;
 //初始化数组
-void intList(stable &l,int len) {
+void initList(stable &l,int len) {
 	l.length = len;
 	//这就是数组
 	l.elements = (ElementType*)malloc(sizeof(ElementType)*l.length);
@@ -71,7 +71,7 @@ int compare(const void* a,const void* b) {
 int main() {
 	stable l;
 	int len = 10;
-	intList(l, 10);
+	initList(l, 10);
 	int position;
 	qsort(l.elements, l.length, sizeof(ElementType), compare);
 	printList(l);
