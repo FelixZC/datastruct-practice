@@ -124,7 +124,7 @@ stable heapSort1(stable &t) {
 	for (int i = 0; i < t.length; i++)
 	{
 		l.elements[i] = t.elements[0];
-		maintainMaxHeap(t, 0, -474137390);
+		maintainMaxHeap(t, 0, -2233);
 	}
 	return l;
 }
